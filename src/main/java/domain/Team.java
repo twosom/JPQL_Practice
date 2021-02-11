@@ -8,7 +8,6 @@ import java.util.List;
 public class Team {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "TEAM_ID")
     private Long id;
     private String name;
@@ -38,5 +37,13 @@ public class Team {
 
     public void setMembers(List<Member> members) {
         this.members = members;
+    }
+
+    @Override
+    public String toString() {
+        return "Team{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
     }
 }
